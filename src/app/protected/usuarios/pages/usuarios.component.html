@@ -1,0 +1,58 @@
+<div class="container animate__animated  animate__backInDown">
+  <div class="row">
+    <div class="col-12 pt-2">
+      <h2>Usuarios de la aplicación</h2>
+      <div class="row">
+        <div class="col-12 col-xs-6">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="crear">Crear Usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="getUsers()">Ver Usuarios</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <form autocomplete="off"
+                (ngSubmit)="buscar()">
+            <input type="text"
+                  name="termino"
+                  class="form-control"
+                  [(ngModel)]="termino"
+                  placeholder="Buscar Usuario">
+          </form>
+          <hr>
+          <div class="table-responsive animate__animated animate__backInDown" *ngIf="users.length > 0" >
+            <table class="table table-Light table-striped table-hover mt-3 text-center">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Rol</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Google</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Correo</th>
+                  <th scope="col">Editar</th>
+                </tr>
+              </thead>
+              <tbody class="animate__animated animate__backInDown rounded">
+                <tr *ngFor="let item of users; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <th>{{item.rol}}</th>
+                  <td>{{item.estado}}</td>
+                  <td>{{item.google}}</td>
+                  <td>{{item.nombre}}</td>
+                  <td>{{item.correo}}</td>
+                  <td><a class="nav-link bg-primary rounded p-1" [routerLink]="['editar/', item.uid]"><i class="fa-regular fa-pen-to-square"></i> Editar </a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

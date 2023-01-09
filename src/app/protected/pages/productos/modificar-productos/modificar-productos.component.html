@@ -1,0 +1,44 @@
+<div class="container animate__animated animate__backInDown">
+  <h1 class="mt-3" >Productos</h1>
+  <div class="row justify-content-center modificar">
+    <div class="col-12 col-sm-6 align-self-center text-center">
+      <h3>{{'Editar y crear nuevos productos' | titlecase}}</h3>
+      <form autocomplete="off"
+              [formGroup]="editarProductos">
+        <label for="form-label">Nombre</label>
+        <input type="text"
+                class="form-control m-2"
+                placeholder="Nombre del producto"
+                formControlName="nombre"
+                (click)="getCategories()">
+
+        <label for="form-label">{{'Seleccione la categoria' | titlecase}} </label>
+        <div>
+          <select class="form-select m-2"
+                  formControlName="categoria">
+            <option selected (click)="getCategories()">Seleccione una opcion</option>
+            <option value="{{category._id}}"
+                    *ngFor="let category of categoria; let i = index" >{{ category.nombre }}</option>
+          </select>
+        </div>
+        <label for="form-label">Precio</label>
+        <input type="number"
+                class="form-control m-2"
+                formControlName="precio"
+                placeholder="Precio del producto">
+        <div class="row justify-content-between">
+          <div class="col-3 align-self-start">
+            <button class="btn btn-outline-success" (click)="createProduct()">
+              Guardar
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-outline-danger" (click)="createProduct()">
+              Borrar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<form>
+  <span class="text-center m-5">
+    <h2>{{ 'registro de usuario' | titlecase  }}</h2>
+  </span>
+
+  <!-- Nombre input -->
+  <div class="form-outline mb-4">
+    <label class="form-label"
+    for="form3Example3">Nombre</label>
+    <input type="text"
+            name="nombre"
+            class="form-control form-control-lg"
+            placeholder="Ingrese su nombre" />
+  </div>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <label class="form-label"
+    for="form3Example3">Correo Electronico</label>
+    <input type="email"
+            name="email"
+            class="form-control form-control-lg"
+            placeholder="Ingrese un correo valido" />
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-3">
+    <label class="form-label" for="form3Example4">Contraseña</label>
+    <input type="password"
+            name="password"
+            class="form-control form-control-lg"
+            placeholder="Ingrese la contraseña" />
+  </div>
+  <div class="d-grid gap-2">
+    <button class="btn btn-outline-primary rounded-pill"
+            type="submit"
+            >Registrar</button>
+  </div>
+  <div class="text-center mt-3">
+    <p class="small fw-bold mt-2 pt-1 mb-0">¿Ya tienes una cuenta? <br> <a routerLink="/auth/login"
+        class="link-info">{{ 'Ingrese aquí' | uppercase }}</a></p>
+  </div>
+
+</form>
