@@ -14,17 +14,18 @@ export class InterceptorService implements HttpInterceptor {
 
     // console.log('interceptors',key)
 
-    // const headers = new HttpHeaders({
-    //   'x-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2JkYzRiMjk0YTBmZjAwNDgzMTQzNTkiLCJpYXQiOjE2NzMzODUyNjAsImV4cCI6MTY3MzM5OTY2MH0.2F3TtgzO8wo-M2VGcDYglV2QGg3GR1ksoEOros6jMp0'
-    // });
     const headers = new HttpHeaders({
-      'x-token': key!
-   });
+      'x-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2JkZGFhNTBhOGRkMTAwNDc2NTMzYzQiLCJpYXQiOjE2NzMzODgyODIsImV4cCI6MTY3MzQwMjY4Mn0.LxVyoyXa8W1h2tvi5DqkxqyeXOPgGpd3Xcm8vQi7xr0'
+      // 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MzJhMWQ3ZDgyODVhNTE3NzBiZGVmNTIiLCJpYXQiOjE2NjM3MDU2MjUsImV4cCI6MTY2MzcyMDAyNX0.CSJMib5H-68n-3Mi124LO1wP5nX504ZYi5fN5AOhiS0',
+      // 'x-token': key!
+    });
 
     const reqClone = req.clone({
       headers
     });
 
     return next.handle(reqClone)
+
+    // return next.handle(reqClone)
   }
 }

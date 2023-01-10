@@ -40,7 +40,7 @@ export class LoginComponent {
     this.authService.login(correo, password ).subscribe( ok => {
     console.log(ok)
     if( ok === true ){
-        this.router.navigateByUrl('/inicio/usuarios')
+        this.router.navigateByUrl('/inicio')
         this.toastr.success('Bienvenido!', 'Credenciales Correctas!');
     }else{
       this.toastr.error(ok, 'Credenciales Incorrectas!');

@@ -15,7 +15,6 @@ export class AuthService {
 
   private Url: string = environment.baseUrl;
   private _user!: Usuario;
-  public key: any = ''
 
   constructor(private http: HttpClient) { }
 
@@ -28,7 +27,6 @@ export class AuthService {
       tap(resp => {
           if( resp.usuario?.estado ){
             localStorage.setItem('token', resp.token!) // token guardado en el local storage
-            // this.key.setItem('token', resp.token!)
             this._user = {
               nombre: resp.usuario.nombre,
               uid: resp.usuario.uid
