@@ -12,7 +12,7 @@ export class InterceptorService implements HttpInterceptor {
     // coloca el token
     let key = localStorage.getItem('token');
 
-    console.log('interceptors',key)
+    // console.log('interceptors',key)
 
     // const headers = new HttpHeaders({
     //   'x-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2JkYzRiMjk0YTBmZjAwNDgzMTQzNTkiLCJpYXQiOjE2NzMzODUyNjAsImV4cCI6MTY3MzM5OTY2MH0.2F3TtgzO8wo-M2VGcDYglV2QGg3GR1ksoEOros6jMp0'
