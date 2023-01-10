@@ -87,4 +87,25 @@ export class ModificarProductosComponent implements OnInit {
         })
     }
   }
+  //Borrar
+  deleteProduct() {
+
+    // console.log(this.idCat)
+    // this.datosService.borrarProducto(this.idCat)
+      // .subscribe(resp => console.log(resp))
+    this.datosService.borrarProducto(this.idCat)
+      .subscribe(resp => {
+        if (resp.estado) {
+          this.router.navigate(['/inicio/productos'], resp)
+          this.toastr.success('Producto Borrado!', 'Informacion!');
+        }
+        else {
+          this.toastr.error("El formulario no pudo ser procesado", 'Error!', resp);
+        }
+      })
+  }
+  //Borrar
+  // deleteProduct(){
+  //   console.log(this.idCat)
+  // }
 }

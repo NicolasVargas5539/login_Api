@@ -24,7 +24,7 @@ export class ProductosComponent {
     this.datosService.buscarProductos()
       .subscribe(resp => {
         this.products = resp.productos;
-        //  console.log(resp);
+        // console.log(resp);
       })
   }
   buscar() {
@@ -36,4 +36,5 @@ export class ProductosComponent {
         this.products = resp.results;
       })
   }
+
 }

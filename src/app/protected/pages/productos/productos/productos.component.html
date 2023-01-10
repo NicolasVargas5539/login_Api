@@ -32,7 +32,7 @@
                   <th scope="col">#</th>
                   <th scope="col">Nombre</th>
                   <th scope="col">Precio</th>
-                  <th scope="col">Categoria</th>
+                  <!-- <th scope="col">Categoria</th> -->
                   <th scope="col">Editar</th>
                 </tr>
               </thead>
@@ -41,7 +41,7 @@
                   <th scope="row">{{ i + 1 }}</th>
                   <th>{{item.nombre}}</th>
                   <td>{{item.precio}}</td>
-                  <td>{{item.categoria.nombre}}</td>
+                  <!-- <td>{{item.categoria.nombre}}</td> -->
                   <td><a class="nav-link bg-primary rounded p-1" [routerLink]="['editar-producto/', item._id]"><i class="fa-regular fa-pen-to-square"></i>Editar</a></td>
                 </tr>
               </tbody>

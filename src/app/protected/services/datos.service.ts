@@ -143,8 +143,9 @@ export class DatosService {
 
   //DELETE -BORRAR deleteProduct
 
-  deleteProduct(){
-
+  borrarProducto(idt: string): Observable<any> {
+    const url = `${this.Url}/productos/${idt}`;
+    return this.http.delete<any>(url)
   }
 }
 
