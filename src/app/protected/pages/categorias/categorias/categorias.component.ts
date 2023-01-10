@@ -33,7 +33,7 @@ export class CategoriasComponent {
     this.datosService.buscarCategoriaPorNombre(this.termino)
       .subscribe(resp => {
         this.categories = resp.results;
-        console.log(this.categories)
+        // console.log(this.categories)
       })
 
   }

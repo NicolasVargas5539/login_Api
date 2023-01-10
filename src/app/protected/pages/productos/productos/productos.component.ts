@@ -32,7 +32,7 @@ export class ProductosComponent {
 
     this.datosService.buscarProductoPorNombre(this.termino)
       .subscribe(resp => {
-        console.log(resp);
+        // console.log(resp);
         this.products = resp.results;
       })
   }

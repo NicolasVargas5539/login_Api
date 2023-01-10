@@ -24,8 +24,8 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent {
 
   miLogin: FormGroup = this.formBuilder.group({
-    correo: ['exampleNic@example.com', [Validators.required]],
-    password: ['123456', [Validators.required]]
+    correo: ['', [Validators.required]],
+    password: ['', [Validators.required]]
   })
 
   constructor(private formBuilder: FormBuilder,

@@ -27,11 +27,11 @@ export class UsuariosComponent {
       })
   }
   buscar() {
-    console.log(this.termino);
+    // console.log(this.termino);
 
     this.datosService.buscarUsuariosPorNombre(this.termino)
       .subscribe(resp => {
-        console.log(resp);
+        // console.log(resp);
         this.users = resp.results;
       })
   }
