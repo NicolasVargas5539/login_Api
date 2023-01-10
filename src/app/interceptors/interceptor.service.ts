@@ -11,7 +11,7 @@ export class InterceptorService implements HttpInterceptor {
     // coloca el token
 
     const headers = new HttpHeaders({
-      'x-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2JiNzIwZWRhMzRkMzAwNDc4Zjk1NzkiLCJpYXQiOjE2NzMzMDQxMTcsImV4cCI6MTY3MzMxODUxN30.NJhBGmRuA6B-IlgO73Wfzu7qJ4YuBk8QFpgKbipFrhk'
+      'x-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2JkNjQyMGI2NTY3ODAwNDliYjQ0ZWMiLCJpYXQiOjE2NzMzNTY3MTgsImV4cCI6MTY3MzM3MTExOH0.Cd-WHTonosQtssEE1qv7bZVTqmLfxyCuF-sVD4thnxE'
     });
 
     const reqClone = req.clone({
