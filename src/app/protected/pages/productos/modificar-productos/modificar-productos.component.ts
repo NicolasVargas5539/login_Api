@@ -12,11 +12,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './modificar-productos.component.html',
   styles: [`
     .modificar{
-      height: 70vh;
+      height: 50vh;
     }
     @media (max-width: 450px) {
       .modificar{
-        height: 50vh;
+        height: 40vh;
       }
     }
   `
