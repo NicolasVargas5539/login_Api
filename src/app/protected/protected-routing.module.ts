@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 import { AgregarComponent } from './usuarios/pages/agregar/agregar.component';
 import { CategoriasComponent } from './pages/categorias/categorias/categorias.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
