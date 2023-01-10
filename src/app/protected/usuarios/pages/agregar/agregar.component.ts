@@ -79,7 +79,7 @@ export class AgregarComponent implements OnInit {
       this.datosService.insertarUsuario(nombre, password, correo, rol).subscribe(ok => {
         console.log(ok.usuario?.estado)
         if (ok.usuario?.estado === true) {
-          this.router.navigateByUrl('/inicio/usuarios')
+          this.router.navigateByUrl('/inicio')
           this.toastr.success('Genial!', 'Usuario Creado Correctamente!');
         } else {
           this.toastr.error("El formulario no pudo ser procesado", 'Error!');
@@ -95,7 +95,7 @@ export class AgregarComponent implements OnInit {
     this.datosService.borrarUsuario(this.idt)
       .subscribe(resp => {
         if (resp.estado === true) {
-          this.router.navigate(['/inicio/usuarios'], resp)
+          this.router.navigate(['/inicio'], resp)
           this.toastr.success('Usuario Borrado!', 'Informacion!');
         } else {
           this.toastr.error("El formulario no pudo ser procesado", 'Error!');

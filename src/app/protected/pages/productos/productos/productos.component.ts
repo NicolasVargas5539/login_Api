@@ -24,7 +24,7 @@ export class ProductosComponent {
     this.datosService.buscarProductos()
       .subscribe(resp => {
         this.products = resp.productos;
-        // console.log(resp);
+        console.log(localStorage.getItem('token'));
       })
   }
   buscar() {
