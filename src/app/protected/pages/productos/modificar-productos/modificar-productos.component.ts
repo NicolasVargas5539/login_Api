@@ -55,9 +55,6 @@ export class ModificarProductosComponent implements OnInit {
 
       })
   }
-  idCateg() {
-    console.log()
-  }
   createProduct() {
     // console.log('Guardado')
     const { nombre, categoria, precio } = this.editarProductos.value;
