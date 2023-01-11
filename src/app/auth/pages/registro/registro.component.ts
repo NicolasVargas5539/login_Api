@@ -40,9 +40,9 @@ export class RegistroComponent {
 
     this.datosService.insertarUsuario(nombre, password, correo, rol)
       .subscribe(ok => {
-        console.log(ok.usuario?.estado)
+        // console.log(ok.usuario?.estado)
         if (ok.usuario?.estado === true) {
-          this.router.navigateByUrl('/inicio/usuarios')
+          this.router.navigateByUrl('/inicio')
           this.toastr.success('Genial!', 'Usuario Creado Correctamente!');
         }
         // else {

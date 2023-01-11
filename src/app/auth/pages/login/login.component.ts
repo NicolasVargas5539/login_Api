@@ -37,8 +37,9 @@ export class LoginComponent {
     console.log(this.miLogin.value);
     const { correo, password } = this.miLogin.value;
 
-    this.authService.login(correo, password ).subscribe( ok => {
-    console.log(ok)
+    this.authService.login(correo, password )
+    .subscribe( ok => {
+    // console.log(ok)
     if( ok === true ){
         this.router.navigateByUrl('/inicio')
         this.toastr.success('Bienvenido!', 'Credenciales Correctas!');

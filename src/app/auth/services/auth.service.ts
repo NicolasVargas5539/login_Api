@@ -35,7 +35,7 @@ export class AuthService {
       }),
       map(resp => resp.usuario?.estado),
       //captura el error y muestra el mensaje.
-      catchError(err => of(err.error.msg))
+      catchError(err => of(err.status))
     )
   }
 }

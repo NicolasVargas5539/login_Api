@@ -28,7 +28,7 @@ export class CategoriasComponent {
   }
 
   buscar() {
-    console.log(this.termino);
+    // console.log(this.termino);
 
     this.datosService.buscarCategoriaPorNombre(this.termino)
       .subscribe(resp => {

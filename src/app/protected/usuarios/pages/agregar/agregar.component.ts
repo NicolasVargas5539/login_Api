@@ -41,7 +41,7 @@ export class AgregarComponent implements OnInit {
   idt: string = '';
 
   usuario: Usuario = {
-    rol: '',
+    rol: 'ADMIN_ROLE',
     estado: true,
     google: false,
     nombre: '',
@@ -67,7 +67,7 @@ export class AgregarComponent implements OnInit {
         // .subscribe(id => console.log('Actualizando Usuario', id))
         .subscribe(id => {
           if (id) {
-            this.router.navigateByUrl('/inicio/usuarios')
+            this.router.navigateByUrl('/inicio')
             this.toastr.success('Usuario Editado Correctamente!', 'Genial!');
           } else {
             this.toastr.error("El formulario no pudo ser procesado", 'Error!');
